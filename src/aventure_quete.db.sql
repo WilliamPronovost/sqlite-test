@@ -90,6 +90,7 @@ FOREIGN KEY (lieuId) REFERENCES lieux(lieuId)
  (1);
 
 CREATE TABLE systemeDeCombat(
+    systemeDeCombatId INT PRIMARY KEY,
     TourJoueur INT,
     TourEnnemis INT,
     FOREIGN KEY (ennemisId) REFERENCES ennemis(ennemisId)
@@ -163,7 +164,7 @@ VALUES
 
 (1,0);
 
-INSERT INTO quetes (acceptation, queteEstComplete, pnjDialogue)
+INSERT INTO pnj_quetes (acceptation, queteEstComplete, pnjDialogue)
 VALUES 
 (1, 1, "Vous pouvez maintenant me chercher de la pierre pour que je puisse solidifier votre equipements"),
 (1, 1, "Vous voulez savoir comment mieux faire des potions et approfondir vos connaissances?")
